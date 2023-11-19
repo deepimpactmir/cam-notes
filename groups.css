@@ -1,24 +1,12 @@
  
 /* start css.sty */
-.cmr-5{font-size:50%;}
-.cmr-7{font-size:70%;}
-.cmmi-5{font-size:50%;font-style: italic;}
-.cmmi-7{font-size:70%;font-style: italic;}
-.cmmi-10{font-style: italic;}
-.cmsy-5{font-size:50%;}
-.cmsy-7{font-size:70%;}
+.cmtt-10{font-family: monospace,monospace;}
 .cmr-17{font-size:170%;}
 .cmr-12{font-size:120%;}
 .cmr-8{font-size:80%;}
-.cmr-6{font-size:60%;}
-.cmmi-6{font-size:60%;font-style: italic;}
 .cmr-9{font-size:90%;}
-.msbm-7{font-size:70%;}
 .cmbx-9{font-size:90%; font-weight: bold;}
 .cmbx-9{ font-weight: bold;}
-.cmmi-9{font-size:90%;font-style: italic;}
-.msbm-10x-x-90{font-size:90%;}
-.cmtt-10{font-family: monospace,monospace;}
 .cmti-10{ font-style: italic;}
 .cmbx-10{ font-weight: bold;}
 .cmbx-10{ font-weight: bold;}
@@ -36,6 +24,15 @@ td center { margin-top:0em; margin-bottom:0em; }
 .Canvas { position:relative; }
 img.math{vertical-align:middle;}
 div.par-math-display, div.math-display{text-align:center;}
+body{ margin:1em auto; max-width:80ch; padding:0 .62em; }
+h1,h2,h3,h4,h5 { line-height:1.2; }
+@media print{ body{ max-width:none } }
+.partHead, .likepartHead { font-size: 2em; }
+.chapterHead, .likechapterHead { font-size: 1.7411em; }
+.sectionHead, .likesectionHead { font-size: 1.5157em; }
+.subsectionHead, .likesubsectionHead { font-size: 1.3195em; }
+.subsubsectionHead, .likesubsubsectionHead { font-size: 1.1487em; }
+ @media (prefers-color-scheme: dark) { img[src^="groups"]{filter: invert(1); } } 
 li p.indent { text-indent: 0em }
 li p:first-child{ margin-top:0em; }
 li p:last-child, li div:last-child { margin-bottom:0.5em; }
@@ -93,6 +90,8 @@ table[rules] {border-left:solid black 0.4pt; border-right:solid black 0.4pt; }
 .hline td, .cline td{ padding: 0; }
 .hline hr, .cline hr{border:none;border-top:1px solid black;}
 .hline {border-top: 1px solid black;}
+.hline + .vspace:last-child{display:none;}
+.hline:first-child{border-bottom:1px solid black;border-top:none;}
 .tabbing-right {text-align:right;}
 div.float, div.figure {margin-left: auto; margin-right: auto;}
 div.float img {text-align:center;}
@@ -117,13 +116,13 @@ table.pmatrix {width:100%;}
 span.bar-css {text-decoration:overline;}
 img.cdots{vertical-align:middle;}
 .partToc a, .partToc, .likepartToc a, .likepartToc {line-height: 200%; font-weight:bold; font-size:110%;}
-.chapterToc a, .chapterToc, .likechapterToc a, .likechapterToc, .appendixToc a, .appendixToc {line-height: 200%; font-weight:bold;}
 .index-item, .index-subitem, .index-subsubitem {display:block}
 div.caption {text-indent:-2em; margin-left:3em; margin-right:1em; text-align:left;}
 div.caption span.id{font-weight: bold; white-space: nowrap; }
 h1.partHead{text-align: center}
 p.bibitem { text-indent: -2em; margin-left: 2em; margin-top:0.6em; margin-bottom:0.6em; }
 p.bibitem-p { text-indent: 0em; margin-left: 2em; margin-top:0.6em; margin-bottom:0.6em; }
+.subsubsectionHead, .likesubsubsectionHead { font-size: 1em; }
 .paragraphHead, .likeparagraphHead { margin-top:2em; font-weight: bold;}
 .subparagraphHead, .likesubparagraphHead { font-weight: bold;}
 .verse{white-space:nowrap; margin-left:2em}
@@ -135,6 +134,10 @@ div.thanks{text-align:left; margin-left:10%; font-size:85%; font-style:italic; }
 div.abstract p {margin-left:5%; margin-right:5%;}
 div.abstract {width:100%;}
 .abstracttitle{text-align:center;margin-bottom:1em;}
+.subsectionToc, .likesubsectionToc {margin-left:1em;}
+.subsubsectionToc, .likesubsubsectionToc {margin-left:2em;}
+.paragraphToc, .likeparagraphToc {margin-left:3em;}
+.subparagraphToc, .likesubparagraphToc {margin-left:4em;}
 figure.float, div.figure {margin-left: auto; margin-right: auto;}
 figure.figure {text-align:center;}
 figcaption.caption {text-indent:-2em; margin-left:3em; margin-right:1em; text-align:center;}
@@ -177,6 +180,8 @@ table[rules] {border-left:solid black 0.4pt; border-right:solid black 0.4pt; }
 .hline td, .cline td{ padding: 0; }
 .hline hr, .cline hr{border:none;border-top:1px solid black;}
 .hline {border-top: 1px solid black;}
+.hline + .vspace:last-child{display:none;}
+.hline:first-child{border-bottom:1px solid black;border-top:none;}
 div.array {text-align:center;}
 .uline,.uline-math{ text-decoration:underline; }
 .uuline,.uuline-math{ text-decoration:underline double; }
